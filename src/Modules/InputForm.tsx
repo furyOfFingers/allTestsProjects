@@ -16,7 +16,7 @@ import {
 } from '../Types/Types';
 import Button from '../Components/Button';
 import Input from '../Components/Input';
-import './Styles/index.css';
+import '../Styles/index.css';
 
 interface IInputFormProps {
   firstName: FirstName;
