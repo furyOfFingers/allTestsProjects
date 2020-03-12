@@ -1,8 +1,9 @@
 import React from 'react';
-import InputForm from './Modules/InputForm';
+import Navbar from './Modules/Navbar';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { rootReducer, InitialState } from './Store/reducers';
+import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(rootReducer, InitialState);
 
@@ -10,7 +11,9 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <InputForm></InputForm>
+        <BrowserRouter>
+          <Navbar></Navbar>
+        </BrowserRouter>
       </Provider>
     );
   }
