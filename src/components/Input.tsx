@@ -2,7 +2,7 @@ import React, { ChangeEvent } from 'react';
 
 interface IInputProps {
   /** Наименование компонента input. */
-  value: string;
+  value: any;
   /** Тип компонента input. */
   type: string;
   /** Placeholder компонента input. */

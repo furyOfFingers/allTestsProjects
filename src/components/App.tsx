@@ -6,12 +6,27 @@ import {
   changeFirstName,
   changeSecondName
 } from '../store/actions';
-import { IFieldState } from '../Types/Types';
+import {
+  FirstName,
+  SecondName,
+  IFieldState,
+  HandleCancelAction,
+  ChangeFirstNameAction,
+  ChangeSecondNameAction
+} from '../Types/Types';
 import Button from './Button';
 import Input from './Input';
 import '../styles/index.css';
 
-class App extends React.Component {
+interface IAppProps {
+  firstName: FirstName;
+  secondName: SecondName;
+  handleCancel: any;
+  changeFirstName: any;
+  changeSecondName: any;
+}
+
+class App extends React.Component<IAppProps, {}> {
   render() {
     const {
       firstName,
@@ -23,7 +38,7 @@ class App extends React.Component {
 
     function handleClickSubmit(): void {
       console.log('handleClickSubmit clicked');
-    };
+    }
 
     return (
       <>
@@ -51,11 +66,7 @@ class App extends React.Component {
           <div className='output_field'>{`${firstName} ${secondName}`}</div>
 
           <div className='button_block'>
-            <Button
-              className='red'
-              text={'Cancel'}
-              onClick={handleCancel}
-            />
+            <Button className='red' text={'Cancel'} onClick={handleCancel} />
 
             <Button
               className='green'
@@ -67,7 +78,7 @@ class App extends React.Component {
       </>
     );
   }
-};
+}
 
 const mapStateToProps = (state: IFieldState) => {
   return {
