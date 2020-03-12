@@ -5,7 +5,7 @@ import {
   handleCancel,
   changeFirstName,
   changeSecondName
-} from '../store/actions';
+} from '../Store/actions';
 import {
   FirstName,
   SecondName,
@@ -14,11 +14,11 @@ import {
   ChangeFirstNameAction,
   ChangeSecondNameAction
 } from '../Types/Types';
-import Button from './Button';
-import Input from './Input';
-import '../styles/index.css';
+import Button from '../Components/Button';
+import Input from '../Components/Input';
+import './Styles/index.css';
 
-interface IAppProps {
+interface IInputFormProps {
   firstName: FirstName;
   secondName: SecondName;
   handleCancel: any;
@@ -26,7 +26,7 @@ interface IAppProps {
   changeSecondName: any;
 }
 
-class App extends React.Component<IAppProps, {}> {
+class InputForm extends React.Component<IInputFormProps, {}> {
   render() {
     const {
       firstName,
@@ -95,4 +95,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(InputForm);
