@@ -5,7 +5,7 @@ import {
   handleCancel,
   changeFirstName,
   changeSecondName
-} from '../Store/actions';
+} from '../../Store/actions';
 import {
   FirstName,
   SecondName,
@@ -13,10 +13,10 @@ import {
   HandleCancelAction,
   ChangeFirstNameAction,
   ChangeSecondNameAction
-} from '../Types/Types';
-import Button from '../Components/Button';
-import Input from '../Components/Input';
-import '../Styles/index.css';
+} from '../../Types/Types';
+import Button from '../../Components/Button';
+import Input from '../../Components/Input';
+import './Input.css';
 
 interface IInputFormProps {
   firstName: FirstName;

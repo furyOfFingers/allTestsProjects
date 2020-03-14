@@ -1,13 +1,14 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
-import About from './About';
-import Home from './Home';
-import InputForm from './InputForm';
+import About from '../About';
+import Home from '../Home';
+import InputForm from '../InputForm/InputForm';
+import './Input.css';
 
 const Navbar = ({}) => {
   return (
     <>
-      <nav>
+      <nav className='nav-bar'>
         <ul>
           <li>
             <Link to='/'>Home</Link>
@@ -16,7 +17,7 @@ const Navbar = ({}) => {
             <Link to='/about'>About</Link>
           </li>
           <li>
-            <Link to='/inputForm'>InputForm</Link>
+            <Link to='/InputForm/InputForm'>InputForm</Link>
           </li>
         </ul>
       </nav>
@@ -28,7 +29,7 @@ const Navbar = ({}) => {
         <Route path='/about'>
           <About />
         </Route>
-        <Route path='/inputForm'>
+        <Route path='/InputForm/InputForm'>
           <InputForm />
         </Route>
       </Switch>
