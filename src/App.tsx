@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Modules/Navbar/Navbar';
+import NavigationBar from './Modules/Navbar/Navbar';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { rootReducer, InitialState } from './Store/reducers';
@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <Navbar></Navbar>
+          <NavigationBar></NavigationBar>
         </BrowserRouter>
       </Provider>
     );

@@ -16,7 +16,7 @@ import {
 } from '../../Types/Types';
 import Button from '../../Components/Button';
 import Input from '../../Components/Input';
-import './Input.css';
+import './InputForm.css';
 
 interface IInputFormProps {
   firstName: FirstName;
@@ -42,7 +42,7 @@ class InputForm extends React.Component<IInputFormProps, {}> {
 
     return (
       <>
-        <h1>Insert Name</h1>
+        <h1>Just write something</h1>
 
         <div className='app'>
           <Input

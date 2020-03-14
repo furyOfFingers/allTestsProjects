@@ -34,18 +34,25 @@ input,
 }
 
 .button_block button {
+  border-radius: 2px;
   font-size: 16px;
   font-weight: bold;
-  padding: 5px 10px;
-  margin: 5px 10px;
+  padding: 5px 5px;
+  margin: 5px 5px;
   border: none;
-  background-color: #f3e0e0;
+  background-color: rgb(119, 113, 105);
+  color: rgb(243, 228, 201);
+  transition: .3s;
 }
 
-.button_block .red {
+.button_block button:hover{
+  cursor: pointer;
+}
+
+.button_block .red:hover {
   color: rgb(199, 115, 115);
 }
 
-.button_block .green {
+.button_block .green:hover {
   color: rgb(116, 196, 116);
 }

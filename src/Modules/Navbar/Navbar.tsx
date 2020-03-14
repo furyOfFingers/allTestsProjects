@@ -3,23 +3,18 @@ import { Switch, Route, Link } from 'react-router-dom';
 import About from '../About';
 import Home from '../Home';
 import InputForm from '../InputForm/InputForm';
-import './Input.css';
+import './Navbar.css';
+import { Nav } from 'react-bootstrap';
 
-const Navbar = ({}) => {
+const NavigationBar = ({}) => {
   return (
-    <>
-      <nav className='nav-bar'>
-        <ul>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/about'>About</Link>
-          </li>
-          <li>
-            <Link to='/InputForm/InputForm'>InputForm</Link>
-          </li>
-        </ul>
+    <div className='navbar-container'>
+      <nav className='navbar'>
+        <span> <Link to='/'>Home</Link> </span>
+
+        <span> <Link to='/about'>About</Link> </span>
+
+        <span> <Link to='/InputForm/InputForm'>InputForm</Link> </span>
       </nav>
 
       <Switch>
@@ -33,8 +28,8 @@ const Navbar = ({}) => {
           <InputForm />
         </Route>
       </Switch>
-    </>
+    </div>
   );
 };
 
-export default Navbar;
+export default NavigationBar;
