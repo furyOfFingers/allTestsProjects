@@ -1,0 +1,33 @@
+.converter-page-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.converter-page-btn{
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  border: none;
+  background-color: rgb(119, 113, 105);
+  color: rgb(243, 228, 201);
+  transition: .3s;
+}
+
+.converter-page-btn:hover{
+  cursor: pointer;
+}
+
+.converter{
+  display: flex;
+  align-items: center;
+  width: 600px;
+}
+
+.real-course{
+  display: flex;
+  align-items: center;
+  width: 600px;
+}

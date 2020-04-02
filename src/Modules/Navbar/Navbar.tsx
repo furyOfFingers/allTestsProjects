@@ -4,28 +4,33 @@ import About from '../About';
 import Home from '../Home';
 import InputForm from '../InputForm/InputForm';
 import './Navbar.css';
-import { Nav } from 'react-bootstrap';
+import ConverterPage from '../Converter/ConverterPage/ConverterPage';
 
 const NavigationBar = ({}) => {
   return (
     <div className='navbar-container'>
       <nav className='navbar'>
-        <span> <Link to='/'>Home</Link> </span>
-
-        <span> <Link to='/about'>About</Link> </span>
-
-        <span> <Link to='/InputForm/InputForm'>InputForm</Link> </span>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        <Link to='/InputForm/InputForm'>InputForm</Link>
+        <Link to='/ConverterPage/ConverterPage'>Converter</Link>
       </nav>
 
       <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
+
         <Route path='/about'>
           <About />
         </Route>
+
         <Route path='/InputForm/InputForm'>
           <InputForm />
+        </Route>
+
+        <Route path='/ConverterPage/ConverterPage'>
+          <ConverterPage />
         </Route>
       </Switch>
     </div>
